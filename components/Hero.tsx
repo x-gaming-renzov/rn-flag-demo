@@ -1,13 +1,18 @@
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, View } from 'react-native';
+import useFeatureFlag from '../src/sdk/useFeatureFlag';
 
-export default function Hero({ source }: { source: number }) {
+export default function Hero({ source }: { source: number | { uri: string } }) {
+  const width = useFeatureFlag<number>('hero-width', 320);
+  const height = useFeatureFlag<number>('hero-height', 180);
+  const borderRadius = useFeatureFlag<number>('hero-border-radius', 12);
+
   return (
     <View>
-      <Image source={source} style={styles.img} resizeMode="contain" />
+      <Image
+        source={source}
+        style={{ width, height, borderRadius }}
+        resizeMode="contain"
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  img: { width: 320, height: 180, borderRadius: 12 },
-});
