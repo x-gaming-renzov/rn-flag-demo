@@ -15,7 +15,7 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
         {copy ? <Headline text={copy} /> : <ActivityIndicator />}
-        <Hero source={require('../assets/hero-placeholder.jpg')} />
+        <Hero source={require('../assets/hero-placeholder.png')} />
       </ScrollView>
     </SafeAreaView>
   );
