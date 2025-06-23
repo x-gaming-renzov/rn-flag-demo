@@ -22,7 +22,10 @@
     "react-native-sse": "^1.2.1",
     "utf8": "^3.0.0",
     "uuid": "^11.1.0",
-    "xg-nova-sdk": "^0.1.2"
+    "xg-nova-sdk": "^0.1.2",
+    "react-dom": "19.0.0",
+    "react-native-web": "^0.20.0",
+    "@expo/metro-runtime": "~5.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
