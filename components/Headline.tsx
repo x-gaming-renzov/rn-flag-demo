@@ -1,22 +1,26 @@
 import { Text } from 'react-native';
-import { useFeatureFlag } from 'xg-nova-sdk';
+import useFeatureFlag from '../src/sdk/useFeatureFlag';
 
-export default function Headline() {
+export default function Headline({ text }: { text?: string }) {
   const heading = useFeatureFlag<string>(
     'expo-headline',
-    'Make Your Game Legendary.'
+    text || 'Make Your Game Legendary.'
   );
+  const color = useFeatureFlag<string>('headline-color', '#fff');
+  const fontSize = useFeatureFlag<number>('headline-font-size', 32);
+  const fontWeight = useFeatureFlag<string>('headline-font-weight', '700');
+  const textAlign = useFeatureFlag<string>('headline-text-align', 'center');
 
   console.log('Headline', heading);
 
   return (
     <Text
       style={{
-        fontSize: 32,
-        fontWeight: '700',
-        textAlign: 'center',
+        color,
+        fontSize,
+        fontWeight: fontWeight as any,
+        textAlign: textAlign as any,
         margin: 20,
-        color: '#fff',          // 👈 add this line
       }}
     >
       {heading}
