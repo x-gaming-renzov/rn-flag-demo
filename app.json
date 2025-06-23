@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "rn-flag-demo",
-    "slug": "rn-flag-demo",
-    "version": "1.0.0",
+    "name": "xg-flag-demo",
+    "slug": "xg-flag-demo",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -20,10 +20,22 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.xgamingplayerscript.xgflagdemo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "267e4df9-88e0-43ab-946d-0b184060b9f0"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/267e4df9-88e0-43ab-946d-0b184060b9f0"
     }
   }
 }
