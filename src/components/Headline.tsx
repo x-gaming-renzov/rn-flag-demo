@@ -1,14 +1,8 @@
 // src/components/Headline.tsx
 import { Text } from 'react-native';
-import { useFeatureFlag } from 'xg-nova-sdk'
 
 export default function Headline() {
-  const heading = useFeatureFlag<string>(
-    'expo-headline',
-    'Make Your Game Legendary.'
-  );
 
-  console.log('Headline', heading);
 
   return (
     <Text
@@ -20,7 +14,7 @@ export default function Headline() {
         color: '#fff',          // 👈 add this line
       }}
     >
-      {heading}
+      Make Your Game Legendary.
     </Text>
   );
 }
